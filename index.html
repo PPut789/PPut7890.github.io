@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอาหละโอนมาสิไอองุ่น</title>
+    <!-- เรียกใช้ Tailwind CSS เพื่อความสวยงาม -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ฟอนต์ภาษาไทย */
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-pink-500 shadow-lg sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex justify-center items-center h-16">
+                <div class="flex space-x-2 md:space-x-8">
+                    <!-- ปุ่ม Navbar ที่กดแล้วไม่ไปหน้าอื่น (ป้องกันค่าเริ่มต้นด้วย onclick) -->
+                    <a href="#" onclick="event.preventDefault();" class="text-white hover:text-pink-200 hover:bg-pink-600 px-3 py-2 rounded-md text-sm md:text-lg font-semibold transition duration-300">
+                        ไอปิงไอเลว
+                    </a>
+                    <a href="#" onclick="event.preventDefault();" class="text-white hover:text-pink-200 hover:bg-pink-600 px-3 py-2 rounded-md text-sm md:text-lg font-semibold transition duration-300">
+                        คนเก่าสันดานเสีย
+                    </a>
+                    <a href="#" onclick="event.preventDefault();" class="text-white hover:text-pink-200 hover:bg-pink-600 px-3 py-2 rounded-md text-sm md:text-lg font-semibold transition duration-300 text-center">
+                        ด่าหมายังสงสารหมา
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full flex flex-col items-center transform transition duration-500 hover:scale-105 border-t-8 border-pink-400">
+            
+            <!-- รูปภาพที่คุณอัปโหลด (ใช้ชื่อไฟล์ 1000011942.jpg) -->
+            <div class="relative w-64 h-64 mb-8">
+                <!-- ใส่ fallback เผื่อกรณีหาไฟล์รูปไม่เจอในเครื่อง -->
+                <img 
+                    src="1000011942.jpg" 
+                    alt="รูปภาพเด็กแว่น" 
+                    class="object-cover w-full h-full rounded-2xl shadow-md border-4 border-gray-200"
+                    onerror="this.src='https://via.placeholder.com/256x256.png?text=Image+Not+Found'"
+                >
+            </div>
+
+            <!-- ข้อความด้านล่างรูป -->
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center leading-relaxed">
+                เอาหละโอนมาสิไอองุ่น
+            </h1>
+            
+            <!-- ตกแต่งเพิ่มเติมขำๆ -->
+            <div class="mt-6">
+                <span class="inline-block bg-pink-100 text-pink-800 text-sm px-4 py-2 rounded-full font-semibold">
+                    รอรับยอดอยู่นะจ๊ะ 💸
+                </span>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
